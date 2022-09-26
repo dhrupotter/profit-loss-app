@@ -5,24 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profit or Loss App</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div>
-      <span>Enter Initial Price:</span>
-      <input class="initial-price" type="number" placeholder="initial price" />
+    <div class="main-wrapper">
+      <div>
+        <nav class="navigation">
+          <div class="navContent">Bear the Bull</div>
+        </nav>
+        <div class="container">
+          <h1 class="heading1">Check Profit/Loss on your stocks</h1>
+          <div class="content">
+            The stock market refers to the collection of markets and exchanges
+            where regular activities of buying, selling, and issuance of shares
+            of publicly-held companies take place. Such financial activities are
+            conducted through institutionalized formal exchanges or
+            over-the-counter (OTC) marketplaces which operate under a defined
+            set of regulations. There can be multiple stock trading venues in a
+            country or a region which allow transactions in stocks and other
+            forms of securities.
+          </div>
+        </div>
+        <div class="container">
+          <span class="heading2">Enter Initial Price:</span>
+          <input
+            class="input"
+            id="initial-price"
+            type="number"
+            placeholder="initial price"
+          />
+        </div>
+        <div class="container">
+          <span class="heading2">Enter Current Price:</span>
+          <input
+            class="input"
+            id="curr-price"
+            type="number"
+            placeholder="current price"
+          />
+        </div>
+        <div class="container">
+          <span class="heading2">Enter No. of Stocks:</span>
+          <input
+            class="input"
+            id="stocks-count"
+            type="number"
+            placeholder="no .of stocks"
+          />
+        </div>
+        <div class="container">
+          <button class="compute-btn">Check out</button>
+        </div>
+        <div class="output"></div>
+      </div>
+      <footer class="footer">
+        <div class="footer-header">Contact Me 👻</div>
+        <ul class="social-links list-non-bullet">
+          <li class="list-item-inline"><a class="link" href="/">Twitter</a></li>
+          <li class="list-item-inline"><a class="link" href="/">Github</a></li>
+          <li class="list-item-inline">
+            <a class="link" href="/">LinkedIn</a>
+          </li>
+        </ul>
+      </footer>
     </div>
-    <div>
-      <span>Enter Current Price:</span>
-      <input class="curr-price" type="number" placeholder="current price" />
-    </div>
-    <div>
-      <span>Enter No. of Stocks:</span>
-      <input class="stocks-count" type="number" placeholder="no .of stocks" />
-    </div>
-    <div>
-      <button class="compute-btn">Check out</button>
-    </div>
-    <div class="output"></div>
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
-var initialPrice = document.querySelector(".initial-price");
-var currentPrice = document.querySelector(".curr-price");
-var stockCount = document.querySelector(".stocks-count");
+var initialPrice = document.querySelector("#initial-price");
+var currentPrice = document.querySelector("#curr-price");
+var stockCount = document.querySelector("#stocks-count");
 var computeButton = document.querySelector(".compute-btn");
 var output = document.querySelector(".output");
 
@@ -20,7 +20,20 @@ function calculateProfitLoss(i, c, n) {
 
 function clickHandler() {
   console.log(initialPrice.value, currentPrice.value, stockCount.value);
-  calculateProfitLoss(initialPrice.value, currentPrice.value, stockCount.value);
+  if (
+    initialPrice.value < 0 ||
+    initialPrice.value === "" ||
+    currentPrice.value < 0 ||
+    currentPrice.value === ""
+  ) {
+    output.innerHTML = `Please enter valid values!`;
+  } else {
+    calculateProfitLoss(
+      initialPrice.value,
+      currentPrice.value,
+      stockCount.value
+    );
+  }
 }
 
 computeButton.addEventListener("click", clickHandler);
